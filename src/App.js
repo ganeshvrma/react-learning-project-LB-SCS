@@ -1,6 +1,5 @@
-
-import React, { useState } from'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,26 +13,25 @@ function App() {
     setCount(0);
   };
   return (
-    <div className="flex ">
-     <div>
-     <h3> increment & decrement</h3>
-     <style>{`.text-red-500 { color: red; }`}</style>  
-     </div>
-    <div className='flex justify-center items-center'>
-   < button className='bg-yellow-100 px-4 py-3' onClick={decreHandler}>
-   -
-   </button>
-   <div>
-{count}
-   </div>
- <button className='bg-yellow-100 px-4 py-3' onClick={increHandler}>+</button>
-    </div>
-     <div>
-      <button className='bg-yellow-100 px-4 py-3' onClick={resetHandler}>
-        Reset
-      </button>
-     </div>
-     
+    <div className=" w-[100vw] h-[100vh] flex  justify-center items-center flex-col gap-10">
+      <div>
+        <h1 className="font-semibold  "> Increment & Decrement</h1>
+        
+      </div>
+      <div className="flex justify-center gap-12 ">
+        <button className=" border-l-2 text-center w-20 text-5xl" onClick={decreHandler}>
+          -
+        </button>
+        <div className="font-bold gap-12 text-5xl">{count}</div>
+        <button className="border-l-2 text-center w-20 text-5xl" onClick={increHandler}>
+          +
+        </button>
+      </div>
+      <div>
+        <button className="bg-yellow-100 px-4 py-3" onClick={resetHandler}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }
